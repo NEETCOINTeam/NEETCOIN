@@ -12,9 +12,8 @@ NEETCOIN is a PoS/POW hybrid cryptocurrency.
 　20000 ~ 22100　　　　　<br>
 　40000 ~ 42100　　　　　<br>
 　70000 ~ 72100　　　　<br>
-　100000 ~ 102100　
- 
-After this, 2100 super blocks every 50000 blocks
+　100000 ~ 102100　  <br>
+  After this, 2100 super blocks every 50000 blocks
 
 + RPCPort: 21010
 
