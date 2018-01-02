@@ -14,7 +14,9 @@
 #ifdef WIN32
 #include <string.h>
 #endif
-
+#ifndef MSG_NOSIGNAL
+   #define MSG_NOSIGNAL 0
+#endif
 
 
 using namespace std;

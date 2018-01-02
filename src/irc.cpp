@@ -15,7 +15,9 @@ int nGotIRCAddresses = 0;
 
 void ThreadIRCSeed2(void* parg);
 
-
+#ifndef MSG_NOSIGNAL
+   #define MSG_NOSIGNAL 0
+#endif
 
 
 #pragma pack(push, 1)
