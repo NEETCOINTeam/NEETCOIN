@@ -16,7 +16,10 @@
 #include <stdint.h>
 #endif
 
-
+#ifdef Q_OS_MAC
+#include <ApplicationServices/ApplicationServices.h>
+#include "macnotificationhandler.h"
+#endif
 
 #ifdef USE_DBUS
 // https://wiki.ubuntu.com/NotificationDevelopmentGuidelines recommends at least 128
@@ -45,7 +48,28 @@ Notificator::Notificator(const QString &programName, QSystemTrayIcon *trayicon, 
         mode = Freedesktop;
     }
 #endif
-
+#ifdef Q_OS_MAC
+ // check if users OS has support for NSUserNotification
+     if( MacNotificationHandler::instance()->hasUserNotificationCenterSupport()) {
+         mode = UserNotificationCenter;
+     }
+     else {
+         // Check if Growl is installed (based on Qt's tray icon implementation)
+         CFURLRef cfurl;
+         OSStatus status = LSGetApplicationForInfo(kLSUnknownType, kLSUnknownCreator, CFSTR("growlTicket"), kLSRolesAll, 0, &cfurl);
+         if (status != kLSApplicationNotFoundErr) {
+             CFBundleRef bundle = CFBundleCreate(0, cfurl);
+             if (CFStringCompare(CFBundleGetIdentifier(bundle), CFSTR("com.Growl.GrowlHelperApp"), kCFCompareCaseInsensitive | kCFCompareBackwards) == kCFCompareEqualTo) {
+                 if (CFStringHasSuffix(CFURLGetString(cfurl), CFSTR("/Growl.app/")))
+                     mode = Growl13;
+                 else
+                     mode = Growl12;
+             }
+             CFRelease(cfurl);
+             CFRelease(bundle);
+         }
+        }
+#endif
 }
 
 Notificator::~Notificator()
@@ -253,8 +277,15 @@ void Notificator::notifyGrowl(Class cls, const QString &title, const QString &te
     quotedTitle.replace("\\", "\\\\").replace("\"", "\\");
     quotedText.replace("\\", "\\\\").replace("\"", "\\");
     QString growlApp(this->mode == Notificator::Growl13 ? "Growl" : "GrowlHelperApp");
-    
-}
+        MacNotificationHandler::instance()->sendAppleScript(script.arg(notificationApp, quotedTitle, quotedText, notificationIcon, growlApp));
+ }
+ 
+ void Notificator::notifyMacUserNotificationCenter(Class cls, const QString &title, const QString &text, const QIcon &icon) {
+     // icon is not supported by the user notification center yet. OSX will use the app icon.
+     MacNotificationHandler::instance()->showNotification(title, text);
+  }
+ 
+
 #endif
 
 void Notificator::notify(Class cls, const QString &title, const QString &text, const QIcon &icon, int millisTimeout)
@@ -270,6 +301,9 @@ void Notificator::notify(Class cls, const QString &title, const QString &text, c
         notifySystray(cls, title, text, icon, millisTimeout);
         break;
 #ifdef Q_OS_MAC
+       case UserNotificationCenter:
+        notifyMacUserNotificationCenter(cls, title, text, icon);
+         break;
     case Growl12:
     case Growl13:
         notifyGrowl(cls, title, text, icon);
