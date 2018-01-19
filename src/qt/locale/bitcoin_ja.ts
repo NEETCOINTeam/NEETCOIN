@@ -318,7 +318,7 @@ MIT/X11 ソフトウェア ライセンス基づいて配布されています�
     <message>
         <location line="+242"/>
         <source>Synchronizing with network...</source>
-        <translation>ネットワークとの期中...</translation>
+        <translation>ネットワークとの同期中...</translation>
     </message>
     <message>
         <location line="-308"/>
