@@ -2400,7 +2400,11 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+2"/>
         <source>Mined</source>
-        <translation>発掘した</translation>
+        <translation>発掘した(PoW)</translation>
+    </message>
+    <message>
+        <source>Staked</source>
+        <translation>発掘した(PoS)</translation>
     </message>
     <message>
         <location line="+38"/>
