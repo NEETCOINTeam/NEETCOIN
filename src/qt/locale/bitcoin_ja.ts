@@ -12,15 +12,6 @@
         <translation>&lt;b&gt;NEETCOIN&lt;/b&gt; バージョン</translation>
     </message>
     <message>
-        <location line="+41"/>
-        <source>Copyright © 2009-2014 The Bitcoin developers
-Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2017 The NEETCOIN developers</source>
-        <translation>Copyright © 2009-2014 The Bitcoin developers
-Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2017 The NEETCOIN developers</translation>
-    </message>
-    <message>
         <location line="+15"/>
         <source>
 This is experimental software.
