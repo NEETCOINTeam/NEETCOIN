@@ -238,17 +238,23 @@
       </widget>
      </item>
      <item>
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
+      <widget class="QImageLabel" name="labelSepia">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="sizeHint" stdset="0">
+       <property name="minimumSize">
         <size>
          <width>20</width>
          <height>40</height>
         </size>
        </property>
-      </spacer>
+       <property name="pixmap">
+        <pixmap resource="../bitcoin.qrc">:/images/bg</pixmap>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -342,6 +348,15 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <customwidgets>
+  <customwidget>
+   <class>QImageLabel</class>
+   <extends>QLabel</extends>
+   <header>qimagelabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../bitcoin.qrc"/>
+ </resources>
  <connections/>
 </ui>
