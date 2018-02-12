@@ -1,5 +1,3 @@
-
-
 NEETCOIN is a PoS/POW hybrid cryptocurrency.
 ## SPEC ##
 
@@ -18,3 +16,12 @@ NEETCOIN is a PoS/POW hybrid cryptocurrency.
 + RPCPort: 21010
 
 + Port: 21011
+
+## How to run tests
+
+```bash
+mkdir build && cd build
+cmake ..
+make
+./test_neetcoin --log_level=message
+```

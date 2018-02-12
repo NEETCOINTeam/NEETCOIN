@@ -10,14 +10,14 @@
 
 using namespace std;
 
-static const string strSecret1     ("5HxWvvfubhXpYYpS3tJkw6fq9jE9j18THftkZjHHfmFiWtmAbrj");
-static const string strSecret2     ("5KC4ejrDjv152FGwP386VD1i2NYc5KkfSMyv1nGy1VGDxGHqVY3");
-static const string strSecret1C    ("Kwr371tjA9u2rFSMZjTNun2PXXP3WPZu2afRHTcta6KxEUdm1vEw");
-static const string strSecret2C    ("L3Hq7a8FEQwJkW1M2GNKDW28546Vp5miewcCzSqUD9kCAXrJdS3g");
-static const CBitcoinAddress addr1 ("1QFqqMUD55ZV3PJEJZtaKCsQmjLT6JkjvJ");
-static const CBitcoinAddress addr2 ("1F5y5E5FMc5YzdJtB9hLaUe43GDxEKXENJ");
-static const CBitcoinAddress addr1C("1NoJrossxPBKfCHuJXT4HadJrXRE9Fxiqs");
-static const CBitcoinAddress addr2C("1CRj2HyM1CXWzHAXLQtiGLyggNT9WQqsDs");
+static const string strSecret1     ("75Rpq3oKfHAUJ8jW22JDtMqDFJN45bGujn4eV1DzDQkucFujTHN");
+static const string strSecret2     ("76jhFwqaWQC32J7NCUwthUwRfTz6LAku3GWPdL6ohQUYTMu5muC");
+static const string strSecret1C    ("TpYa75MTMxLoUd8b5Wj1sgwo47dvbGHDmou6SbzKXmroCFhjphsj");
+static const string strSecret2C    ("TvKSgy3QtmMhviX6ZgMHBgKDrn6zXc4kh1SisMJd7LcZqLajGTmw");
+static const CBitcoinAddress addr1 ("NPj8gWD3FiJxTGtsx1Q1MvNFKNR6VjRRLs");
+static const CBitcoinAddress addr2 ("Ncm6rpnrTxSCSqTVRX5qHVWVVMRsWdmdFx");
+static const CBitcoinAddress addr1C("NS8icpExfDzaHmjz5vP5GgXBJPUzjmsApX");
+static const CBitcoinAddress addr2C("Nc6AziBxdXhu4Usbhv4ukym6L3K8fDaKWu");
 
 
 static const string strAddressBad("1HV9Lc3sNHZxwj4Zk6fB38tEmBryq2cBiF");
@@ -89,6 +89,7 @@ BOOST_AUTO_TEST_CASE(key_test1)
     for (int n=0; n<16; n++)
     {
         string strMsg = strprintf("Very secret message %i: 11", n);
+        BOOST_TEST_MESSAGE(strMsg);
         uint256 hashMsg = Hash(strMsg.begin(), strMsg.end());
 
         // normal signatures
