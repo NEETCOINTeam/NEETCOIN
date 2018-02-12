@@ -183,6 +183,8 @@ bool AppInit(int argc, char* argv[])
 }
 
 extern void noui_connect();
+
+#ifndef TEST_DATA_DIR
 int main(int argc, char* argv[])
 {
     bool fRet = false;
@@ -198,6 +200,8 @@ int main(int argc, char* argv[])
     return 1;
 }
 #endif
+
+#endif // #if !defined(QT_GUI)
 
 bool static InitError(const std::string &str)
 {
