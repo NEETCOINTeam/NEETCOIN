@@ -41,6 +41,8 @@ src/qt/res/icons/transaction0.png, src/qt/res/icons/transaction2.png
 src/qt/res/icons/transaction_conflicted.png, src/qt/res/icons/tx_inout.png
 src/qt/res/icons/tx_input.png, src/qt/res/icons/tx_mined.png
 src/qt/res/icons/tx_output.png, src/qt/res/icons/tx_staked.png
-src/qt/res/movies/update_spinner.gif
+src/qt/res/movies/update_spinner.gif, src/qt/res/icons/connect0_16.png
+src/qt/res/icons/connect1_16.png, src/qt/res/icons/connect2_16.png
+src/qt/res/icons/connect3_16.png, src/qt/res/icons/connect4_16.png
 Designer: tipi
 License: All rights reserved
