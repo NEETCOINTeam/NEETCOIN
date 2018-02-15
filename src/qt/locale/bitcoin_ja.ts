@@ -1018,7 +1018,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+7"/>
         <source>&amp;Address</source>
-        <translation>アドレス帳 (&amp;A)</translation>
+        <translation>アドレス (&amp;A)</translation>
     </message>
     <message>
         <location line="+10"/>
