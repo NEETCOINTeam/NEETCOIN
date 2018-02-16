@@ -22,12 +22,12 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
 macx {
 #
-        BOOST_INCLUDE_PATH=/usr/local/opt/boost@1.60/include
-        BOOST_LIB_PATH=/usr/local/opt/boost@1.60/lib
+        BOOST_INCLUDE_PATH=/usr/local/opt/boost162/include
+        BOOST_LIB_PATH=/usr/local/opt/boost162/lib
         BDB_INCLUDE_PATH=/usr/local/opt/berkeley-db@4/include
         BDB_LIB_PATH=/usr/local/opt/berkeley-db@4/lib
-        OPENSSL_INCLUDE_PATH=/usr/local/opt/openssl/include
-        OPENSSL_LIB_PATH=/usr/local/opt/openssl/lib
+        OPENSSL_INCLUDE_PATH=/usr/local/opt/openssl@1.1/include
+        OPENSSL_LIB_PATH=/usr/local/opt/openssl@1.1/lib
         MINIUPNPC_INCLUDE_PATH=/usr/local/opt/miniupnpc/include
         MINIUPNPC_LIB_PATH=/usr/local/opt/miniupnpc/lib
         }
