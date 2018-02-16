@@ -123,10 +123,23 @@ add_library(core
 )
 
 add_executable(test_neetcoin
+        src/test/accounting_tests.cpp
+        src/test/allocator_tests.cpp
+        src/test/base32_tests.cpp
+        src/test/base64_tests.cpp
         src/test/bignum_tests.cpp
+        src/test/getarg_tests.cpp
         src/test/key_tests.cpp
+        src/test/mruset_tests.cpp
+        src/test/netbase_tests.cpp
+        src/test/rpc_tests.cpp
         src/test/script_tests.cpp
+        src/test/sigopcount_tests.cpp
         src/test/test_bitcoin.cpp
+        src/test/uint160_tests.cpp
+        src/test/uint256_tests.cpp
+        src/test/util_tests.cpp
+        src/test/wallet_tests.cpp
 )
 
 target_link_libraries(test_neetcoin
