@@ -1765,8 +1765,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a NEETCOIN address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Enter a NEETCOIN address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a NEETCOIN address (e.g. NRqfJv1ucdfu8cwR7k9uERN3jgqRsHyMYF)</source>
+        <translation>Enter a NEETCOIN address (e.g. NRqfJv1ucdfu8cwR7k9uERN3jgqRsHyMYF)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1909,7 +1909,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to send the payment to  (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address to send the payment to  (e.g. NRqfJv1ucdfu8cwR7k9uERN3jgqRsHyMYF)</source>
         <translation></translation>
     </message>
     <message>
@@ -1939,8 +1939,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a NEETCOIN address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Enter a NEETCOIN address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a NEETCOIN address (e.g. NRqfJv1ucdfu8cwR7k9uERN3jgqRsHyMYF)</source>
+        <translation>Enter a NEETCOIN address (e.g. NRqfJv1ucdfu8cwR7k9uERN3jgqRsHyMYF)</translation>
     </message>
 </context>
 <context>
@@ -1963,8 +1963,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address to sign the message with (e.g. NRqfJv1ucdfu8cwR7k9uERN3jgqRsHyMYF)</source>
+        <translation>The address to sign the message with (e.g. NRqfJv1ucdfu8cwR7k9uERN3jgqRsHyMYF)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2027,8 +2027,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address the message was signed with (e.g. NRqfJv1ucdfu8cwR7k9uERN3jgqRsHyMYF)</source>
+        <translation>The address the message was signed with (e.g. NRqfJv1ucdfu8cwR7k9uERN3jgqRsHyMYF)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -2043,8 +2043,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a NEETCOIN address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Enter a NEETCOIN address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a NEETCOIN address (e.g. NRqfJv1ucdfu8cwR7k9uERN3jgqRsHyMYF)</source>
+        <translation>Enter a NEETCOIN address (e.g. NRqfJv1ucdfu8cwR7k9uERN3jgqRsHyMYF)</translation>
     </message>
     <message>
         <location line="-2"/>
