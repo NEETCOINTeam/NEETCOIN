@@ -1279,6 +1279,16 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>コインコントロール機能を表示する(エキスパートのみ！)</translation>
     </message>
     <message>
+        <location/>
+        <source>Display NIITO Sepia in overview</source>
+        <translation>新富せぴあを表示する</translation>
+    </message>
+    <message>
+        <location/>
+        <source>Whether to show NIITO Sepia in overview or not.</source>
+        <translation>新富せぴあを表示するかどうか。</translation>
+    </message>
+    <message>
         <location line="+71"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
