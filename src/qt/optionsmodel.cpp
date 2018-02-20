@@ -41,6 +41,7 @@ void OptionsModel::Init()
     // These are Qt-only settings:
     nDisplayUnit = settings.value("nDisplayUnit", BitcoinUnits::BTC).toInt();
     bDisplayAddresses = settings.value("bDisplayAddresses", false).toBool();
+    bDisplayBackgroundImage = settings.value("bDisplayBackgroundImage", true).toBool();
     fMinimizeToTray = settings.value("fMinimizeToTray", false).toBool();
     fMinimizeOnClose = settings.value("fMinimizeOnClose", false).toBool();
     fCoinControlFeatures = settings.value("fCoinControlFeatures", false).toBool();
@@ -104,6 +105,8 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
             return QVariant(nDisplayUnit);
         case DisplayAddresses:
             return QVariant(bDisplayAddresses);
+        case DisplayBackgroundImage:
+            return QVariant(bDisplayBackgroundImage);
         case Language:
             return settings.value("language", "");
         case CoinControlFeatures:
@@ -189,6 +192,12 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
             bDisplayAddresses = value.toBool();
             settings.setValue("bDisplayAddresses", bDisplayAddresses);
             break;
+        case DisplayBackgroundImage: {
+            bDisplayBackgroundImage = value.toBool();
+            settings.setValue("bDisplayBackgroundImage", bDisplayBackgroundImage);
+            emit displayBackgroundImageChanged(bDisplayBackgroundImage);
+            }
+            break;
         case Language:
             settings.setValue("language", value);
             break;
@@ -240,4 +249,9 @@ int OptionsModel::getDisplayUnit()
 bool OptionsModel::getDisplayAddresses()
 {
     return bDisplayAddresses;
+}
+
+bool OptionsModel::getDisplayBackgroundImage()
+{
+    return bDisplayBackgroundImage;
 }
