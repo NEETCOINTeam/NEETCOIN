@@ -29,6 +29,7 @@ public:
         ReserveBalance,    // qint64
         DisplayUnit,       // BitcoinUnits::Unit
         DisplayAddresses,  // bool
+        DisplayBackgroundImage, // bool
         Language,          // QString
         CoinControlFeatures, // bool
         OptionIDRowCount,
@@ -47,12 +48,14 @@ public:
     bool getMinimizeOnClose();
     int getDisplayUnit();
     bool getDisplayAddresses();
+    bool getDisplayBackgroundImage();
     bool getCoinControlFeatures();
     QString getLanguage() { return language; }
 
 private:
     int nDisplayUnit;
     bool bDisplayAddresses;
+    bool bDisplayBackgroundImage;
     bool fMinimizeToTray;
     bool fMinimizeOnClose;
     bool fCoinControlFeatures;
@@ -63,6 +66,7 @@ signals:
     void transactionFeeChanged(qint64);
     void reserveBalanceChanged(qint64);
     void coinControlFeaturesChanged(bool);
+    void displayBackgroundImageChanged(bool);
 };
 
 #endif // OPTIONSMODEL_H
