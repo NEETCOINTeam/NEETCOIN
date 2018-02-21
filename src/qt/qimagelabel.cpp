@@ -7,11 +7,15 @@
 
 #include "qimagelabel.h"
 
-QImageLabel::QImageLabel(QWidget *parent) : QLabel(parent) {}
+QImageLabel::QImageLabel(QWidget *parent) : QLabel(parent) {
+    QSizePolicy policy = sizePolicy();
+    policy.setRetainSizeWhenHidden(true);
+    setSizePolicy(policy);
+}
 
 void QImageLabel::paintEvent(QPaintEvent *event) {
     // If pixmap is not set, call parent's method
-    if (!this->pixmap() || this->pixmap()->isNull()) {
+    if (!pixmap() || pixmap()->isNull()) {
         QLabel::paintEvent(event);
         return;
     }
@@ -19,15 +23,15 @@ void QImageLabel::paintEvent(QPaintEvent *event) {
     QPainter painter(this);
     drawFrame(&painter);
 
-    QSize scaledSize = this->size() * devicePixelRatioF();
-    QImage *originalImage = new QImage(this->pixmap()->toImage());
+    QSize scaledSize = size() * devicePixelRatioF();
+    QImage *originalImage = new QImage(pixmap()->toImage());
     QImage scaledImage = originalImage->scaled(scaledSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
     QPixmap *scaledPixmap = new QPixmap(QPixmap::fromImage(scaledImage));
     scaledPixmap->setDevicePixelRatio(devicePixelRatioF());
 
-    int marginX = (this->width() - scaledPixmap->width()) / 2;
-    int marginY = (this->height() - scaledPixmap->height()) / 2;
+    int marginX = (width() - scaledPixmap->width()) / 2;
+    int marginY = (height() - scaledPixmap->height()) / 2;
 
     painter.drawPixmap(marginX, marginY, *scaledPixmap);
 

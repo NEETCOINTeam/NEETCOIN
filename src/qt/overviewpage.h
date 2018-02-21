@@ -45,6 +45,7 @@ private:
 
 private slots:
     void updateDisplayUnit();
+    void updateDisplayBackgroundImage(bool fShow);
     void handleTransactionClicked(const QModelIndex &index);
 };
 
