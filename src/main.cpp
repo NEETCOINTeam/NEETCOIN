@@ -2577,7 +2577,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1511862256;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = !fTestNet ? 0 : 0;
+        block.nNonce   = !fTestNet ? 786242 : 51905;
         
         if (true  && (block.GetHash() != hashGenesisBlock)) {
 		printf("making new genesis block");
