@@ -611,7 +611,7 @@ MIT/X11 ソフトウェア ライセンス基づいて配布されています�
     <message>
         <location line="+59"/>
         <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
-        <translation>このトランザクションはサイズ制限を超えている。%1 の手数料で送ることができます。これは、トランザクションを処理するノードに送られ、ネットワークをサポートするのに役立ちます。 あなたは手数料を支払しますか？</translation>
+        <translation>このトランザクションはサイズ制限を超えています。%1 の手数料で送ることができます。これは、トランザクションを処理するノードに送られ、ネットワークをサポートするのに役立ちます。 あなたは手数料を支払しますか？</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1116,7 +1116,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+6"/>
         <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</source>
-        <translation>トランザクションを早めるための1KBあたりのオプショントランザクション手数料。だいたいのトランザクションは1KB。手数料はの0.01を推奨します。</translation>
+        <translation>トランザクションを早めるための1KBあたりのオプショントランザクション手数料。だいたいのトランザクションは1KB。手数料は0.01を推奨します。</translation>
     </message>
     <message>
         <location line="+15"/>
