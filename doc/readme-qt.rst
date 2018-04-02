@@ -46,22 +46,38 @@ Windows build instructions:
 Mac OS X
 --------
 
-- Download and install the `Qt Mac OS X SDK`_. It is recommended to also install Apple's Xcode with UNIX tools.
+Mac build instructions:
 
-- Download and install `MacPorts`_.
+- Install `Homebrew`_
 
-- Execute the following commands in a terminal to get the dependencies:
-
+- Install brew packages
 ::
 
-	sudo port selfupdate
-	sudo port install boost db48 miniupnpc
+	brew install miniupnpc　　
+	brew install openssl@1.1　　
+	brew install qt　　
 
+- Download and Install `Boost162`_
+::
+
+	tar xjf boost-1.62.0.tar.bz2
+	cd boost_1_62_0
+
+	./bootstrap.sh --prefix=/usr/local/Cellar/boost162/1.62.0 --libdir=/usr/local/Cellar/boost162/1.62.0/lib
+	./b2 --prefix=/usr/local/Cellar/boost162/1.62.0 --libdir=/usr/local/Cellar/boost162/1.62.0/lib -d2 -j4 --layout=tagged install threading=multi,single link=shared,static address-model=64 architecture=x86 pch=off cxxflags="-arch x86_64 -std=c++11 -stdlib=libc++" linkflags=-stdlib=libc++
+
+	brew link boost162
+
+- then execute the following:
+::
+
+	qmake
+	make
+	
 - Open the .pro file in Qt Creator and build as normal (cmd-B)
 
-.. _`Qt Mac OS X SDK`: http://qt-project.org/downloads
-.. _`MacPorts`: http://www.macports.org/install.php
-
+.. _`Boost162`: https://sourceforge.net/projects/boost/files/boost/1.62.0/
+.. _`Homebrew`: https://brew.sh/index
 
 Build configuration options
 ============================
